@@ -102,7 +102,7 @@ metadata:
     nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
   rules:
-  - host: gogs.k8slocal
+  - host: gogs.local
     http:
       paths:
       - path: /
