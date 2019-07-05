@@ -6,6 +6,22 @@ metadata:
 
 ---
 apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: gogs-pv
+  namespace: gogs
+  labels:
+    type: local
+spec:
+  accessModes:
+    - ReadWriteOnce
+  capacity:
+    storage: 2Gi
+  hostPath:
+    path: /mnt
+
+---
+apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
   name: gogs-pv-claim
@@ -76,20 +92,20 @@ spec:
     targetPort: 3000
     nodePort: 30080
 
-# ---
-# apiVersion: extensions/v1beta1
-# kind: Ingress
-# metadata:
-#   name: gogs-ingress
-#   namespace: gogs
-#   annotations:
-#     nginx.ingress.kubernetes.io/rewrite-target: /
-# spec:
-#   rules:
-#   - host: gogs.local
-#     http:
-#       paths:
-#       - path: /
-#         backend:
-#           serviceName: gogs-svc
-#           servicePort: 10080
+---
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: gogs-ingress
+  namespace: gogs
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /
+spec:
+  rules:
+  - host: gogs.k8slocal
+    http:
+      paths:
+      - path: /
+        backend:
+          serviceName: gogs-svc
+          servicePort: 10080
