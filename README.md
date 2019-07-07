@@ -17,10 +17,12 @@ deployment.extensions/gogs created
 service/gogs-svc created
 ```
 
-You may want to modify:
+Depending on your needs, you may want to modify:
 
 - size of the persistent volume (currently `2GB`)
 - Gogs Docker image (currently `gogs/gogs:0.11.86`)
+- number of replicas
+- turn the Deployment into a StatefulSet or a DaemonSet
 
 ## Access to Gogs ##
 
@@ -32,7 +34,7 @@ You may access Gogs in 2 ways:
 If you use Minikube then you should add the local address of Gogs to /etc/hosts with the following command:
 
 ```shell
-sudo echo $(minikube ip)" gogs.local"
+echo -e "\n"$(minikube ip)" gogs.local" | sudo tee -a /etc/hosts
 ```
 
 ### Access via web interface ###
