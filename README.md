@@ -42,7 +42,7 @@ echo -e "\n"$(minikube ip)" gogs.local" | sudo tee -a /etc/hosts
 In order to access the Gogs web interface you have the following options:
 
 - via an Ingress (uncomment the ingress section in [gogs.yaml](gogs.yaml))
-- via an Istio gateway - run the script [istio.yaml](istio.yaml) to create the Istion entities needed. For this option you will need to previously [install Istio](https://github.com/drabo/istio)
+- via an Istio gateway - run the script [istio.yaml](istio.yaml) to create the Istio entities needed. For this option you will need to previously [install Istio](https://github.com/drabo/istio)
 
 ```shell
 $ kubectl apply -f istio.yaml
