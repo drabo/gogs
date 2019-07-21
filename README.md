@@ -65,7 +65,7 @@ For simplicity choose `SQLite3`
 
 - Domain: `gogs.local`
 - SSH Port: `30022`
-- HTTP Port: `80`
+- HTTP Port: `3000`
 - Application URL: `http://gogs.local/`
 
 ![Application General Settings](img/app-config.png)
