@@ -4,21 +4,21 @@ kind: Namespace
 metadata:
   name: gogs
 
-# ---
-# apiVersion: v1
-# kind: PersistentVolume
-# metadata:
-#   name: gogs-pv
-#   namespace: gogs
-#   labels:
-#     type: local
-# spec:
-#   accessModes:
-#     - ReadWriteOnce
-#   capacity:
-#     storage: 2Gi
-#   hostPath:
-#     path: /mnt
+---
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: gogs-pv
+  namespace: gogs
+  labels:
+    type: local
+spec:
+  accessModes:
+    - ReadWriteOnce
+  capacity:
+    storage: 2Gi
+  hostPath:
+    path: /mnt/data/gogs
 
 ---
 apiVersion: v1
@@ -53,7 +53,7 @@ spec:
     spec:
       containers:
       - name: gogs
-        image: gogs/gogs:0.11.86
+        image: gogs/gogs:0.11.91
         ports:
         - containerPort: 22
           name: ssh
