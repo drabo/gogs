@@ -1,6 +1,6 @@
 # Install Gogs in Kubernetes #
 
-This following installation steps will create a working Git server in Kubernetes.
+The following installation steps will create a working Git server in Kubernetes.
 
 ## Installation ##
 
