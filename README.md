@@ -20,7 +20,7 @@ service/gogs-svc created
 Depending on your needs, you may want to modify:
 
 - size of the persistent volume (currently `2GB`)
-- Gogs Docker image (currently `gogs/gogs:0.11.86`)
+- Gogs Docker image (currently `gogs/gogs:0.11.91`)
 - number of replicas
 - turn the Deployment into a StatefulSet or a DaemonSet
 
