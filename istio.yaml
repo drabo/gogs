@@ -3,6 +3,7 @@ apiVersion: networking.istio.io/v1alpha3
 kind: Gateway
 metadata:
   name: gogs-gateway
+  namespace: gogs
 spec:
   selector:
     istio: ingressgateway
@@ -19,6 +20,7 @@ apiVersion: networking.istio.io/v1alpha3
 kind: VirtualService
 metadata:
   name: gogs-vs
+  namespace: gogs
 spec:
   hosts:
   - gogs.local
