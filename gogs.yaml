@@ -51,6 +51,8 @@ spec:
     metadata:
       labels:
         app: gogs
+        istio-injection: enabled
+        version: v1
     spec:
       containers:
       - name: gogs
