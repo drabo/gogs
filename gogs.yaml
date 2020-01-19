@@ -4,21 +4,21 @@ kind: Namespace
 metadata:
   name: gogs
 
----
-apiVersion: v1
-kind: PersistentVolume
-metadata:
-  name: gogs-pv
-  namespace: gogs
-  labels:
-    type: local
-spec:
-  accessModes:
-    - ReadWriteOnce
-  capacity:
-    storage: 2Gi
-  hostPath:
-    path: /mnt/data/gogs
+# ---
+# apiVersion: v1
+# kind: PersistentVolume
+# metadata:
+#   name: gogs-pv
+#   namespace: gogs
+#   labels:
+#     type: local
+# spec:
+#   accessModes:
+#     - ReadWriteOnce
+#   capacity:
+#     storage: 2Gi
+#   hostPath:
+#     path: /mnt/data/gogs
 
 ---
 apiVersion: v1
@@ -51,8 +51,8 @@ spec:
     metadata:
       labels:
         app: gogs
-        istio-injection: enabled
-        version: v1
+        # istio-injection: enabled
+        # version: v1
     spec:
       containers:
       - name: gogs
