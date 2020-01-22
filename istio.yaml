@@ -2,7 +2,7 @@
 apiVersion: networking.istio.io/v1alpha3
 kind: Gateway
 metadata:
-  name: gogs-gateway
+  name: gogs-gw
   namespace: gogs
 spec:
   selector:
@@ -25,7 +25,7 @@ spec:
   hosts:
   - gogs.local
   gateways:
-  - gogs-gateway
+  - gogs-gw
   http:
   - route:
     - destination:
