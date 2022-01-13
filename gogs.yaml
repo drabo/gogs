@@ -93,7 +93,7 @@ spec:
     nodePort: 30022
   - name: http
     protocol: TCP
-    port: 10080
+    port: 18080
     targetPort: 3000
     nodePort: 30080
 
@@ -113,7 +113,7 @@ spec:
 #       - path: /
 #         backend:
 #           serviceName: gogs-svc
-#           servicePort: 10080
+#           servicePort: 18080
 
 ---
 apiVersion: networking.k8s.io/v1
@@ -134,4 +134,4 @@ spec:
           service:
             name: gogs-svc
             port:
-              number: 10080
+              number: 18080

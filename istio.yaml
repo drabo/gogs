@@ -31,5 +31,5 @@ spec:
     - destination:
         host: gogs-svc.gogs.svc.cluster.local
         port:
-          number: 10080
+          number: 18080
       weight: 100
