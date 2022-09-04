@@ -20,7 +20,7 @@ service/gogs-svc created
 Depending on your needs, you may want to modify:
 
 - size of the persistent volume (currently `2GB`)
-- Gogs Docker image (currently `gogs/gogs:0.12.9`)
+- Gogs Docker image (currently `gogs/gogs:0.12.10`)
 - number of replicas
 - turn the Deployment into a StatefulSet or a DaemonSet
 
@@ -106,3 +106,7 @@ Connection to gogs.local closed.
 ```
 
 More information about the Docker for Gogs on page https://github.com/gogs/gogs/tree/master/docker
+
+## Gogs for ARM64 ##
+
+If you have a Kubernetes cluster running on a Raspberry Pi 4 with 8GB RAM or a server in cloud running ARM64 processor then Gogs may installed by using the deployment script [gogs-arm64.yaml](gogs-arm64.yaml)
