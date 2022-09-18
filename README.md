@@ -109,4 +109,4 @@ More information about the Docker for Gogs on page https://github.com/gogs/gogs/
 
 ## Gogs for ARM64 ##
 
-If you have a Kubernetes cluster running on a Raspberry Pi 4 with 8GB RAM or a server in cloud running ARM64 processor then Gogs may installed by using the deployment script [gogs-arm64.yaml](gogs-arm64.yaml)
+If you have a Kubernetes cluster running on a Raspberry Pi 4 with 8GB RAM or a server in cloud running ARM64 processor then Gogs may be installed by using the deployment script [gogs-arm64.yaml](gogs-arm64.yaml)
