@@ -57,7 +57,7 @@ spec:
     spec:
       containers:
       - name: gogs
-        image: gogs/gogs:0.12.10
+        image: gogs/gogs:0.13
         ports:
         - containerPort: 22
           name: ssh
